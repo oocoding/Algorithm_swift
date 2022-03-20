@@ -20,22 +20,18 @@ public class Node<T:Equatable> {
 
 
 extension Node: Equatable {
-    public static func == (lhs: Node<T>, rhs: Node<T>) -> Bool {
+    public static func == (lhs: Node, rhs: Node) -> Bool {
         lhs.value == rhs.value
     }
-    
 }
+
 
 extension Node: CustomStringConvertible {
     public var description: String {
-        
         guard let next = next else {
             return "\(value)"
         }
             
         return "\(value) -> \(next)"
-
     }
-    
-    
 }
