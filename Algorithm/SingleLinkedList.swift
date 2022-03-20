@@ -123,6 +123,63 @@ public class SingleLinkedList<T:Equatable> {
         return curr?.value
     }
     
+    
+    public func remove(at index: Int) -> T? {
+        
+        guard !isEmpty else {
+            return nil
+        }
+        
+        // 删除头元素
+        if index == 0 {
+            if head == tail {
+                defer {
+                    if head == tail {
+                        head = nil
+                        tail = nil
+                    } else {
+                        head = head?.next
+                    }
+                }
+                return self.head?.value
+            } else {
+                return nil
+            }
+        }
+        
+        
+        
+        var prev = self.head
+        var curr = self.head
+        
+        for _ in 0..<index {
+            prev = curr
+            curr = curr?.next
+        }
+        
+        if prev == nil && curr == nil {
+            return nil
+        }
+        
+        // remove the last one
+        else if prev != nil && curr == nil {
+            defer {
+                prev?.next = nil
+                self.tail = prev
+            }
+            
+            return curr?.value
+        }
+        
+        else if prev != nil && curr != nil {
+            prev?.next = curr?.next
+            curr?.next = nil
+            
+            return curr?.value
+        }
+        
+        return nil
+    }
 }
 
 

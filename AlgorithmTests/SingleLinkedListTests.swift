@@ -141,6 +141,23 @@ class SingleLinkedListTests: XCTestCase {
     
     
     
+    func test_removeAt_whenIndexOutOfBounds_returnNil() {
+        let sut = makeSUT()
+        let removedValue = sut.remove(at: 0)
+        XCTAssertEqual(removedValue, nil)
+        
+        sut.append(value: 1)
+        let removedValue2 = sut.remove(at: 1)
+        XCTAssertEqual(removedValue2, nil)
+    }
+    
+    func test_removeAt_whenIndexInsidesBounds_returnValue() {
+        let sut = makeSUT(values: [1,2,3])
+        let removedValue = sut.remove(at: 1)
+
+        XCTAssertEqual(removedValue, 2)
+    }
+    
     func makeSUT(values:[Int]=[]) -> SingleLinkedList<Int> {
         let list = SingleLinkedList<Int>()
         let _ = values.reduce(list) { list, value in
