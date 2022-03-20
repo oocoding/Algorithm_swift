@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD4F6A7927E7AB7100EFFB43 /* DoubleLinkedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F6A7827E7AB7100EFFB43 /* DoubleLinkedNode.swift */; };
+		DD4F6A7B27E7AB7E00EFFB43 /* DoubleLinkedNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F6A7A27E7AB7E00EFFB43 /* DoubleLinkedNodeTests.swift */; };
 		DD8677D927E7576E00213C28 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677D827E7576E00213C28 /* Node.swift */; };
 		DD8677DB27E7577E00213C28 /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677DA27E7577E00213C28 /* NodeTests.swift */; };
 		DD8677DF27E75BA400213C28 /* SingleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677DE27E75BA400213C28 /* SingleLinkedList.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD4F6A7827E7AB7100EFFB43 /* DoubleLinkedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLinkedNode.swift; sourceTree = "<group>"; };
+		DD4F6A7A27E7AB7E00EFFB43 /* DoubleLinkedNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLinkedNodeTests.swift; sourceTree = "<group>"; };
 		DD8677D827E7576E00213C28 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		DD8677DA27E7577E00213C28 /* NodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
 		DD8677DE27E75BA400213C28 /* SingleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLinkedList.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 				DDCDEB1327E7535E00B8C528 /* Algorithm.h */,
 				DD8677D827E7576E00213C28 /* Node.swift */,
 				DD8677DE27E75BA400213C28 /* SingleLinkedList.swift */,
+				DD4F6A7827E7AB7100EFFB43 /* DoubleLinkedNode.swift */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 				DDCDEB1D27E7535F00B8C528 /* AlgorithmTests.swift */,
 				DD8677DA27E7577E00213C28 /* NodeTests.swift */,
 				DD8677E027E75BAF00213C28 /* SingleLinkedListTests.swift */,
+				DD4F6A7A27E7AB7E00EFFB43 /* DoubleLinkedNodeTests.swift */,
 			);
 			path = AlgorithmTests;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 			files = (
 				DD8677DF27E75BA400213C28 /* SingleLinkedList.swift in Sources */,
 				DD8677D927E7576E00213C28 /* Node.swift in Sources */,
+				DD4F6A7927E7AB7100EFFB43 /* DoubleLinkedNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDCDEB1E27E7535F00B8C528 /* AlgorithmTests.swift in Sources */,
+				DD4F6A7B27E7AB7E00EFFB43 /* DoubleLinkedNodeTests.swift in Sources */,
 				DD8677DB27E7577E00213C28 /* NodeTests.swift in Sources */,
 				DD8677E127E75BAF00213C28 /* SingleLinkedListTests.swift in Sources */,
 			);
