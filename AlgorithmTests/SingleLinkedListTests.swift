@@ -151,13 +151,36 @@ class SingleLinkedListTests: XCTestCase {
         XCTAssertEqual(removedValue2, nil)
     }
     
-    func test_removeAt_whenIndexInsidesBounds_returnValue() {
-        let sut = makeSUT(values: [1,2,3])
-        let removedValue = sut.remove(at: 1)
-
-        XCTAssertEqual(removedValue, 2)
+    func test_removeAt_whenIndexAtBeginOfBounds_returnValue() {
+        XCTAssertEqual(makeSUT(values: [0,1,2,3]).remove(at: 0), 0)
+        XCTAssertEqual(makeSUT(values: [0,1,2,3]).remove(at: 1), 1)
+        XCTAssertEqual(makeSUT(values: [0,1,2,3]).remove(at: 2), 2)
+        XCTAssertEqual(makeSUT(values: [0,1,2,3]).remove(at: 3), 3)
+        XCTAssertEqual(makeSUT(values: [0,1,2,3]).remove(at: 4), nil)
     }
     
+    
+    func test_removeAt_whenIndexInsidesBounds_leftElements() {
+        // 一个元素删除头元素
+        XCTAssertEqual(makeSUT(values: [], removeAt: 0), makeSUT())
+        XCTAssertEqual(makeSUT(values: [1], removeAt: 0), makeSUT())
+        XCTAssertEqual(makeSUT(values: [1,2], removeAt: 0), makeSUT(values: [2]))
+        
+        
+        // 一个元素删除尾元素
+        XCTAssertEqual(makeSUT(values: [], removeAt: 0), makeSUT())
+        XCTAssertEqual(makeSUT(values: [1], removeAt: 0), makeSUT())
+        XCTAssertEqual(makeSUT(values: [1,2], removeAt: 1), makeSUT(values: [1]))
+        XCTAssertEqual(makeSUT(values: [1,2,3], removeAt: 2), makeSUT(values: [1,2]))
+        
+    }
+    
+    func makeSUT(values:[Int], removeAt index:Int) -> SingleLinkedList<Int> {
+        let sut = makeSUT(values: values)
+        let _ = sut.remove(at: index)
+        return sut
+    }
+
     func makeSUT(values:[Int]=[]) -> SingleLinkedList<Int> {
         let list = SingleLinkedList<Int>()
         let _ = values.reduce(list) { list, value in

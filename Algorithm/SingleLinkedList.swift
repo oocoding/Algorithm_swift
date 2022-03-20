@@ -143,7 +143,11 @@ public class SingleLinkedList<T:Equatable> {
                 }
                 return self.head?.value
             } else {
-                return nil
+            
+                defer {
+                    head = head?.next
+                }
+                return head?.value
             }
         }
         
@@ -158,23 +162,23 @@ public class SingleLinkedList<T:Equatable> {
         }
         
         if prev == nil && curr == nil {
+            // index is out of the bounds
             return nil
         }
         
-        // remove the last one
+        
         else if prev != nil && curr == nil {
-            defer {
-                prev?.next = nil
-                self.tail = prev
-            }
-            
-            return curr?.value
+            // index is out of the bounds
+            return nil
         }
         
         else if prev != nil && curr != nil {
             prev?.next = curr?.next
             curr?.next = nil
             
+            if curr == tail {
+                tail = prev
+            }
             return curr?.value
         }
         
