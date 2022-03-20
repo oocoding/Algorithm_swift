@@ -7,6 +7,24 @@
 
 import Foundation
 
-class DoubleLinkedNode {
+public class DoubleLinkedNode<T:Equatable> {
+    
+    public let value: T
+    
+    var next: DoubleLinkedNode?
+    
+    weak var previous: DoubleLinkedNode?
+    
+    init(value: T) {
+        self.value = value
+    }
+}
+
+
+extension DoubleLinkedNode: Equatable {
+    public static func == (lhs: DoubleLinkedNode<T>, rhs: DoubleLinkedNode<T>) -> Bool {
+        lhs.value == rhs.value
+    }
+    
     
 }
