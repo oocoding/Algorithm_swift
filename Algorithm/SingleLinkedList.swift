@@ -32,7 +32,7 @@ public class SingleLinkedList<T:Equatable> {
     
     
     
-    /// <#Description#>
+    /// Description
     /// - Parameters:
     ///   - index: 插入的小标
     ///   - value: 元素的值
@@ -91,6 +91,36 @@ public class SingleLinkedList<T:Equatable> {
         
         
         return false
+    }
+    
+    
+    
+    public func removeLast() -> T? {
+        guard !isEmpty  else {
+            return nil
+        }
+        
+        // is there only one item in the list.
+        if self.tail == self.head {
+            defer {
+                self.head = nil
+                self.tail = nil
+            }
+            return self.head?.value
+        }
+            
+        var prev = self.head
+        var curr = self.head
+        
+        while curr != tail {
+            prev = curr
+            curr = curr?.next
+        }
+        
+        self.tail = prev
+        self.tail?.next = nil
+        
+        return curr?.value
     }
     
 }

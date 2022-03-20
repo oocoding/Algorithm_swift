@@ -110,6 +110,37 @@ class SingleLinkedListTests: XCTestCase {
     }
     
     
+    
+    func test_removeLast_checkReturnValue() {
+  
+        XCTAssertEqual(makeSUT().removeLast(), nil)
+        XCTAssertEqual(makeSUT(values: [1]).removeLast(), 1)
+        XCTAssertEqual(makeSUT(values: [1,2]).removeLast(), 2)
+    }
+    
+    func test_removeLast_checkElements() {
+        
+        let sut = makeSUT(values: [1,2,3,4])
+        
+        let _ = sut.removeLast()
+        XCTAssertEqual(sut, makeSUT(values: [1,2,3]))
+
+        let _ = sut.removeLast()
+        XCTAssertEqual(sut, makeSUT(values: [1,2]))
+        
+        let _ = sut.removeLast()
+        XCTAssertEqual(sut, makeSUT(values: [1]))
+        
+        let _ = sut.removeLast()
+        XCTAssertEqual(sut.isEmpty, true)
+        XCTAssertEqual(sut, makeSUT(values: []))
+        
+        let _ = sut.removeLast()
+        XCTAssertEqual(sut, makeSUT(values: []))
+    }
+    
+    
+    
     func makeSUT(values:[Int]=[]) -> SingleLinkedList<Int> {
         let list = SingleLinkedList<Int>()
         let _ = values.reduce(list) { list, value in
