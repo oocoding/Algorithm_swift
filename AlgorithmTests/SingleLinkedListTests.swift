@@ -65,7 +65,7 @@ class SingleLinkedListTests: XCTestCase {
         XCTAssertEqual(sut, makeSUT(values: [1,2,3]))
         
         
-        // break the tail. should not equal
+        // break the head. should not equal
         let tmpHead = sut.head
         sut.head = nil
         XCTAssertNotEqual(sut, makeSUT(values: [1,2,3]))
@@ -73,11 +73,11 @@ class SingleLinkedListTests: XCTestCase {
         sut.head = tmpHead
         XCTAssertEqual(sut, makeSUT(values: [1,2,3]))
         
-        // if elements is not equal. then sut is not equal.
+        // if elements are not equal. then suts are not equal.
         sut.append(value: 3)
         sut.append(value: 4)
         XCTAssertNotEqual(sut, makeSUT(values: [1,2,3,4]))
-        XCTAssertEqual(sut, makeSUT(values: [1,2,3,3,4]))
+        XCTAssertEqual   (sut, makeSUT(values: [1,2,3,3,4]))
     }
     
     
@@ -151,7 +151,7 @@ class SingleLinkedListTests: XCTestCase {
         XCTAssertEqual(removedValue2, nil)
     }
     
-    func test_removeAt_whenIndexAtBeginOfBounds_returnValue() {
+    func test_removeAt_checkReturnsValue() {
         XCTAssertEqual(makeSUT(values: [0,1,2,3]).remove(at: 0), 0)
         XCTAssertEqual(makeSUT(values: [0,1,2,3]).remove(at: 1), 1)
         XCTAssertEqual(makeSUT(values: [0,1,2,3]).remove(at: 2), 2)
@@ -165,7 +165,7 @@ class SingleLinkedListTests: XCTestCase {
         XCTAssertEqual(makeSUT(values: [], removeAt: 0), makeSUT())
         XCTAssertEqual(makeSUT(values: [1], removeAt: 0), makeSUT())
         XCTAssertEqual(makeSUT(values: [1,2], removeAt: 0), makeSUT(values: [2]))
-        
+        XCTAssertEqual(makeSUT(values: [1,2,3], removeAt: 0), makeSUT(values: [2,3]))
         
         // 一个元素删除尾元素
         XCTAssertEqual(makeSUT(values: [], removeAt: 0), makeSUT())
@@ -173,6 +173,9 @@ class SingleLinkedListTests: XCTestCase {
         XCTAssertEqual(makeSUT(values: [1,2], removeAt: 1), makeSUT(values: [1]))
         XCTAssertEqual(makeSUT(values: [1,2,3], removeAt: 2), makeSUT(values: [1,2]))
         
+        
+        XCTAssertEqual(makeSUT(values: [1,2,3], removeAt: 1), makeSUT(values: [1,3]))
+        XCTAssertEqual(makeSUT(values: [1,2,3,4], removeAt: 2), makeSUT(values: [1,2,4]))
     }
     
     func makeSUT(values:[Int], removeAt index:Int) -> SingleLinkedList<Int> {
