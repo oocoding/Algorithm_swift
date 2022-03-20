@@ -25,6 +25,16 @@ extension DoubleLinkedNode: Equatable {
     public static func == (lhs: DoubleLinkedNode<T>, rhs: DoubleLinkedNode<T>) -> Bool {
         lhs.value == rhs.value
     }
-    
-    
+}
+
+
+// custom desc
+extension DoubleLinkedNode: CustomStringConvertible {
+    public var description: String {
+        guard let next = next else {
+            return "\(value)"
+        }
+        
+        return "\(value) -> " + String(describing: next)
+    }
 }
