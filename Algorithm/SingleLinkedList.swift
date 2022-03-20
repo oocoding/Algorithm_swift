@@ -39,7 +39,19 @@ extension SingleLinkedList: Equatable {
             return false
         }
 
-        return true
+        var lhsCurr = lhs.head
+        var rhsCurr = rhs.head
+        
+        while lhsCurr == rhsCurr, lhsCurr != nil {
+            lhsCurr = lhsCurr?.next
+            rhsCurr = rhsCurr?.next
+        }
+        
+        if lhsCurr==nil, rhsCurr==nil {
+            return true
+        } else {
+            return false
+        }
     }
 }
 
