@@ -16,6 +16,8 @@ class NodeTests: XCTestCase {
         
         XCTAssertNil(sut.next)
         XCTAssertEqual(sut.value, 3)
+        
+        print(sut)
     }
     
     func makeSUT(value:Int = 0) -> Node<Int> {

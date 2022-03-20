@@ -12,7 +12,7 @@ public class Node<T:Equatable> {
     
     internal var next: Node?
     
-    init(value: T) {
+    public init(value: T) {
         self.value = value
     }
     
@@ -23,5 +23,18 @@ extension Node: Equatable {
     public static func == (lhs: Node<T>, rhs: Node<T>) -> Bool {
         lhs.value == rhs.value
     }
+    
+}
+
+extension Node: CustomStringConvertible {
+    public var description: String {
+        guard let next = next else {
+            return "\(value)"
+        }
+            
+        return "\(value) -> \(next)"
+
+    }
+    
     
 }

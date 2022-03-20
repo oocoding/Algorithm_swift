@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DD8677D927E7576E00213C28 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677D827E7576E00213C28 /* Node.swift */; };
 		DD8677DB27E7577E00213C28 /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677DA27E7577E00213C28 /* NodeTests.swift */; };
+		DD8677DF27E75BA400213C28 /* SingleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677DE27E75BA400213C28 /* SingleLinkedList.swift */; };
+		DD8677E127E75BAF00213C28 /* SingleLinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677E027E75BAF00213C28 /* SingleLinkedListTests.swift */; };
 		DDCDEB1927E7535F00B8C528 /* Algorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCDEB1027E7535E00B8C528 /* Algorithm.framework */; };
 		DDCDEB1E27E7535F00B8C528 /* AlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCDEB1D27E7535F00B8C528 /* AlgorithmTests.swift */; };
 		DDCDEB1F27E7535F00B8C528 /* Algorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = DDCDEB1327E7535E00B8C528 /* Algorithm.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		DD8677D827E7576E00213C28 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		DD8677DA27E7577E00213C28 /* NodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
+		DD8677DE27E75BA400213C28 /* SingleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLinkedList.swift; sourceTree = "<group>"; };
+		DD8677E027E75BAF00213C28 /* SingleLinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLinkedListTests.swift; sourceTree = "<group>"; };
 		DDCDEB1027E7535E00B8C528 /* Algorithm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Algorithm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCDEB1327E7535E00B8C528 /* Algorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		DDCDEB1827E7535F00B8C528 /* AlgorithmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +79,7 @@
 			children = (
 				DDCDEB1327E7535E00B8C528 /* Algorithm.h */,
 				DD8677D827E7576E00213C28 /* Node.swift */,
+				DD8677DE27E75BA400213C28 /* SingleLinkedList.swift */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			children = (
 				DDCDEB1D27E7535F00B8C528 /* AlgorithmTests.swift */,
 				DD8677DA27E7577E00213C28 /* NodeTests.swift */,
+				DD8677E027E75BAF00213C28 /* SingleLinkedListTests.swift */,
 			);
 			path = AlgorithmTests;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8677DF27E75BA400213C28 /* SingleLinkedList.swift in Sources */,
 				DD8677D927E7576E00213C28 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +215,7 @@
 			files = (
 				DDCDEB1E27E7535F00B8C528 /* AlgorithmTests.swift in Sources */,
 				DD8677DB27E7577E00213C28 /* NodeTests.swift in Sources */,
+				DD8677E127E75BAF00213C28 /* SingleLinkedListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
