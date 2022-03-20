@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD8677D927E7576E00213C28 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677D827E7576E00213C28 /* Node.swift */; };
+		DD8677DB27E7577E00213C28 /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677DA27E7577E00213C28 /* NodeTests.swift */; };
 		DDCDEB1927E7535F00B8C528 /* Algorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCDEB1027E7535E00B8C528 /* Algorithm.framework */; };
 		DDCDEB1E27E7535F00B8C528 /* AlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCDEB1D27E7535F00B8C528 /* AlgorithmTests.swift */; };
 		DDCDEB1F27E7535F00B8C528 /* Algorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = DDCDEB1327E7535E00B8C528 /* Algorithm.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +25,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD8677D827E7576E00213C28 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		DD8677DA27E7577E00213C28 /* NodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
 		DDCDEB1027E7535E00B8C528 /* Algorithm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Algorithm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCDEB1327E7535E00B8C528 /* Algorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		DDCDEB1827E7535F00B8C528 /* AlgorithmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				DDCDEB1327E7535E00B8C528 /* Algorithm.h */,
+				DD8677D827E7576E00213C28 /* Node.swift */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -78,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				DDCDEB1D27E7535F00B8C528 /* AlgorithmTests.swift */,
+				DD8677DA27E7577E00213C28 /* NodeTests.swift */,
 			);
 			path = AlgorithmTests;
 			sourceTree = "<group>";
@@ -144,6 +150,7 @@
 				TargetAttributes = {
 					DDCDEB0F27E7535E00B8C528 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1330;
 					};
 					DDCDEB1727E7535F00B8C528 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -191,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8677D927E7576E00213C28 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDCDEB1E27E7535F00B8C528 /* AlgorithmTests.swift in Sources */,
+				DD8677DB27E7577E00213C28 /* NodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +344,7 @@
 		DDCDEB2327E7535F00B8C528 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -356,6 +366,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -363,6 +374,7 @@
 		DDCDEB2427E7535F00B8C528 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -391,6 +403,7 @@
 		DDCDEB2627E7535F00B8C528 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B27HLK8YHH;
@@ -406,6 +419,7 @@
 		DDCDEB2727E7535F00B8C528 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B27HLK8YHH;
