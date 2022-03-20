@@ -15,4 +15,30 @@ public class DoublyLinkedList<T: Equatable> {
     var isEmpty: Bool {
         head == nil && tail == nil
     }
+    
+    
+    
+    // TODO: wait to fix it.
+    
+    /// - Parameter index: index description
+    /// - Returns: description
+    public func nodeAt(index: Int) -> DoubleLinkedNode<T>? {
+        return nil
+    }
+    
+    
+}
+
+
+extension DoublyLinkedList: Equatable {
+    public static func == (lhs: DoublyLinkedList<T>, rhs: DoublyLinkedList<T>) -> Bool {
+        
+        guard lhs.head == rhs.head && lhs.tail == rhs.tail else {
+            return false
+        }
+        
+        return true
+    }
+    
+    
 }

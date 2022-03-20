@@ -147,11 +147,9 @@ public class SingleLinkedList<T:Equatable> {
                 defer {
                     head = head?.next
                 }
-                return head?.value
+                return self.head?.value
             }
         }
-        
-        
         
         var prev = self.head
         var curr = self.head
