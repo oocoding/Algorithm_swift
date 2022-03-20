@@ -81,6 +81,25 @@ class SingleLinkedListTests: XCTestCase {
     }
     
     
+    func test_insertAtIndex_withEqual() {
+        
+        let sut = makeSUT()
+        
+        XCTAssertEqual(sut.insert(at: 1, value: 1), false)
+        XCTAssertEqual(sut, makeSUT(values: []))
+        
+        XCTAssertEqual(sut.insert(at: 0, value: 1), true)
+        XCTAssertEqual(sut, makeSUT(values: [1]))
+        
+        XCTAssertEqual(sut.insert(at: 2, value: 2), false)
+        XCTAssertEqual(sut, makeSUT(values: [1]))
+        
+        XCTAssertEqual(sut.insert(at: 1, value: 2), true)
+        XCTAssertEqual(sut, makeSUT(values: [1,2]))
+        
+        XCTAssertEqual(sut.insert(at: 0, value: 0), true)
+        XCTAssertEqual(sut, makeSUT(values: [0,1,2]))
+    }
     
     func test_append_headAndTailShouldNotNil() {
         let sut = makeSUT()
