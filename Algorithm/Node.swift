@@ -28,6 +28,7 @@ extension Node: Equatable {
 
 extension Node: CustomStringConvertible {
     public var description: String {
+        
         guard let next = next else {
             return "\(value)"
         }
