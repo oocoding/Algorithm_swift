@@ -13,7 +13,7 @@ public class SingleLinkedList<T:Equatable> {
     var tail: Node<T>?
     
     public var isEmpty: Bool {
-        return head == nil
+        head == nil && tail == nil
     }
     
     

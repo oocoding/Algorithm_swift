@@ -35,6 +35,6 @@ extension DoubleLinkedNode: CustomStringConvertible {
             return "\(value)"
         }
         
-        return "\(value) -> " + String(describing: next)
+        return "\(value) -> " + String(describing: next) + " "
     }
 }
