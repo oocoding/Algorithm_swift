@@ -23,7 +23,40 @@ public class DoublyLinkedList<T: Equatable> {
     /// - Parameter index: index description
     /// - Returns: description
     public func nodeAt(index: Int) -> DoubleLinkedNode<T>? {
+        guard index >= 0 else {
+            return nil
+        }
+        
+        guard !isEmpty else {
+            return nil
+        }
+        
+        
+        var i = index
+        
+        var node = head
+        
+        while node != nil {
+            if i == 0 { return node }
+            i -= 1
+            node = node?.next
+        }
+        
         return nil
+    }
+    
+    
+    public func append(newNode: DoubleLinkedNode<T>) {
+         guard !isEmpty else {
+            head = newNode
+            tail = newNode
+            return
+        }
+        
+        tail?.next = newNode
+        newNode.previous = tail
+        tail = newNode
+        return
     }
     
     

@@ -15,12 +15,12 @@ class SingleLinkedListTests: XCTestCase {
     let node3 = Node(value: 3)
     let node4 = Node(value: 4)
     
-    func test_init_listIsEmpty() {
+    func test_init_itemsShouldBeEmpty() {
         XCTAssertEqual(makeSUT().isEmpty, true)
     }
     
     
-    func test_appendOneElement() {
+    func test_appendOneElement_headAndTailShouldPointToTheNode() {
         let sut = makeSUT()
         
         sut.append(value: node1.value)
@@ -30,7 +30,7 @@ class SingleLinkedListTests: XCTestCase {
     }
     
     
-    func test_appendTwoElement() {
+    func test_appendTwoElement_headShouldPointToTheFirst_tailShouldPointToSec() {
         let sut = makeSUT()
         
         sut.append(value: node1.value)
@@ -44,7 +44,7 @@ class SingleLinkedListTests: XCTestCase {
     
     
     
-    func test_append_withEqual() {
+    func test_append_checkElementsInTheList() {
         let sut = makeSUT()
         
         sut.append(value: 1)
@@ -81,7 +81,7 @@ class SingleLinkedListTests: XCTestCase {
     }
     
     
-    func test_insertAtIndex_withEqual() {
+    func test_insertAtIndex_checkElementsWithEqual() {
         
         let sut = makeSUT()
         
@@ -100,6 +100,15 @@ class SingleLinkedListTests: XCTestCase {
         XCTAssertEqual(sut.insert(at: 0, value: 0), true)
         XCTAssertEqual(sut, makeSUT(values: [0,1,2]))
     }
+    
+    private func makeSUT(values:[Int], andInsert value:Int, at index: Int) -> SingleLinkedList<Int> {
+        let sut = makeSUT(values: values)
+        
+        let _ = sut.insert(at: index, value: value)
+        
+        return sut
+    }
+    
     
     func test_append_headAndTailShouldNotNil() {
         let sut = makeSUT()

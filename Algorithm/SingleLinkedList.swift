@@ -20,6 +20,7 @@ public class SingleLinkedList<T:Equatable> {
     public func append(value: T) {
         let newNode = Node(value: value)
         
+        // 因为第一各元素会改变 head 的值，所以要小心，特殊对待
         guard isEmpty == false else {
             head = newNode
             tail = newNode
@@ -47,6 +48,7 @@ public class SingleLinkedList<T:Equatable> {
             return false
         }
 
+        // 空链表只能在 0 位置插入元素
         if isEmpty==true && index > 0 {
             return false
         }
@@ -56,6 +58,7 @@ public class SingleLinkedList<T:Equatable> {
             newNode.next = head
             head = newNode
             
+            // 插入的第一个元素会改变 tail 的值，注意！
             if tail == nil { tail = newNode }
             
             return true

@@ -19,13 +19,37 @@ class DoublyLinkedListTests: XCTestCase {
     }
     
     
+    func test_appendANodeToEmptyList_tailAndHeadShouldPointerToTheNode() {
+        
+        let sut = makeSUT()
+        
+        let node = DoubleLinkedNode(value: 1)
+        sut.append(newNode: node)
+        
+        XCTAssertEqual(sut.head, node)
+        XCTAssertEqual(sut.tail, node)
+        
+        let node2 = DoubleLinkedNode(value: 2)
+        sut.append(newNode: node2)
+        
+        XCTAssertEqual(sut.head, node)
+        XCTAssertEqual(sut.tail, node2)
+        XCTAssertEqual(node.next, node2)
+        XCTAssertEqual(node2.previous, node)
+    }
     
     func test_emptyListGetNodeAtZero_shouldReturnNil() {
         let sut = makeSUT()
         
         XCTAssertEqual(sut.nodeAt(index: 0), nil)
         XCTAssertEqual(sut.nodeAt(index: 1), nil)
+        
+        sut.append(newNode: DoubleLinkedNode(value: 1))
+        XCTAssertEqual(sut.nodeAt(index: 0)?.value, 1)
+        XCTAssertEqual(sut.nodeAt(index: 1), nil)
     }
+    
+    
     
     
     func test_equal_S1_S2_haveSameElements_shouldEqualToEachOther() {
