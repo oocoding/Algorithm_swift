@@ -13,6 +13,10 @@
 		DD4F6A7F27E7AD4B00EFFB43 /* DoublyLinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F6A7E27E7AD4B00EFFB43 /* DoublyLinkedListTests.swift */; };
 		DD81E73F27E82A110019CE8A /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81E73E27E82A110019CE8A /* TreeNode.swift */; };
 		DD81E74127E830510019CE8A /* TreeNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81E74027E830510019CE8A /* TreeNodeTests.swift */; };
+		DD81E74527E83AA90019CE8A /* BTNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81E74427E83AA90019CE8A /* BTNode.swift */; };
+		DD81E74727E83D6C0019CE8A /* BTNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81E74627E83D6C0019CE8A /* BTNodeTests.swift */; };
+		DD81E74927E850A10019CE8A /* BinarySearchTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81E74827E850A10019CE8A /* BinarySearchTreeTests.swift */; };
+		DD81E74B27E850C90019CE8A /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81E74A27E850C90019CE8A /* BinarySearchTree.swift */; };
 		DD8677D927E7576E00213C28 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677D827E7576E00213C28 /* Node.swift */; };
 		DD8677DB27E7577E00213C28 /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677DA27E7577E00213C28 /* NodeTests.swift */; };
 		DD8677DF27E75BA400213C28 /* SingleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677DE27E75BA400213C28 /* SingleLinkedList.swift */; };
@@ -39,6 +43,10 @@
 		DD4F6A7E27E7AD4B00EFFB43 /* DoublyLinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListTests.swift; sourceTree = "<group>"; };
 		DD81E73E27E82A110019CE8A /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		DD81E74027E830510019CE8A /* TreeNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNodeTests.swift; sourceTree = "<group>"; };
+		DD81E74427E83AA90019CE8A /* BTNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTNode.swift; sourceTree = "<group>"; };
+		DD81E74627E83D6C0019CE8A /* BTNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTNodeTests.swift; sourceTree = "<group>"; };
+		DD81E74827E850A10019CE8A /* BinarySearchTreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeTests.swift; sourceTree = "<group>"; };
+		DD81E74A27E850C90019CE8A /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		DD8677D827E7576E00213C28 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		DD8677DA27E7577E00213C28 /* NodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
 		DD8677DE27E75BA400213C28 /* SingleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLinkedList.swift; sourceTree = "<group>"; };
@@ -95,6 +103,8 @@
 				DD4F6A7827E7AB7100EFFB43 /* DoubleLinkedNode.swift */,
 				DD4F6A7C27E7AD2E00EFFB43 /* DoublyLinkedList.swift */,
 				DD81E73E27E82A110019CE8A /* TreeNode.swift */,
+				DD81E74427E83AA90019CE8A /* BTNode.swift */,
+				DD81E74A27E850C90019CE8A /* BinarySearchTree.swift */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -108,6 +118,8 @@
 				DD4F6A7A27E7AB7E00EFFB43 /* DoubleLinkedNodeTests.swift */,
 				DD4F6A7E27E7AD4B00EFFB43 /* DoublyLinkedListTests.swift */,
 				DD81E74027E830510019CE8A /* TreeNodeTests.swift */,
+				DD81E74627E83D6C0019CE8A /* BTNodeTests.swift */,
+				DD81E74827E850A10019CE8A /* BinarySearchTreeTests.swift */,
 			);
 			path = AlgorithmTests;
 			sourceTree = "<group>";
@@ -223,7 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD8677DF27E75BA400213C28 /* SingleLinkedList.swift in Sources */,
+				DD81E74527E83AA90019CE8A /* BTNode.swift in Sources */,
 				DD8677D927E7576E00213C28 /* Node.swift in Sources */,
+				DD81E74B27E850C90019CE8A /* BinarySearchTree.swift in Sources */,
 				DD4F6A7927E7AB7100EFFB43 /* DoubleLinkedNode.swift in Sources */,
 				DD81E73F27E82A110019CE8A /* TreeNode.swift in Sources */,
 				DD4F6A7D27E7AD2E00EFFB43 /* DoublyLinkedList.swift in Sources */,
@@ -237,6 +251,8 @@
 				DDCDEB1E27E7535F00B8C528 /* AlgorithmTests.swift in Sources */,
 				DD4F6A7B27E7AB7E00EFFB43 /* DoubleLinkedNodeTests.swift in Sources */,
 				DD8677DB27E7577E00213C28 /* NodeTests.swift in Sources */,
+				DD81E74727E83D6C0019CE8A /* BTNodeTests.swift in Sources */,
+				DD81E74927E850A10019CE8A /* BinarySearchTreeTests.swift in Sources */,
 				DD8677E127E75BAF00213C28 /* SingleLinkedListTests.swift in Sources */,
 				DD4F6A7F27E7AD4B00EFFB43 /* DoublyLinkedListTests.swift in Sources */,
 				DD81E74127E830510019CE8A /* TreeNodeTests.swift in Sources */,
