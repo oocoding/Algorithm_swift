@@ -32,7 +32,7 @@ public class BTNode<T: Comparable> {
         }
         
         inOrderTraversal(node.leftChild)
-        print(node.value, terminator: " ")
+        print(node)
         inOrderTraversal(node.rightChild)
     }
     
@@ -43,7 +43,7 @@ public class BTNode<T: Comparable> {
 
         
         // 访问中间节点
-        print(node.value, terminator: " ")
+        print(node)
         
         // 访问 left
         if let left = node.leftChild {
@@ -67,11 +67,46 @@ public class BTNode<T: Comparable> {
         self.postOrderTraversal(node.leftChild)
         self.postOrderTraversal(node.rightChild)
         
-        print(node.value, terminator: " ")
+        print(node)
 
     }
     
 }
 
 
+extension BTNode {
+    
+    // 递归获取最小元素
+    var min: BTNode {
+        guard let left = self.leftChild else {
+            return self
+        }
+        
+        return left.min
+    }
+}
 
+extension BTNode: CustomStringConvertible {
+    public var description: String {
+        
+        if self.leftChild == nil, self.rightChild == nil {
+            return "nil <- \(self.value) -> nil"
+        }
+        
+        else if self.leftChild != nil, self.rightChild == nil {
+            return "\(self.leftChild!.value) <- \(self.value) -> nil"
+        }
+        
+        else if self.leftChild == nil, self.rightChild != nil {
+            return "nil <- \(self.value) -> \(self.rightChild!.value)"
+        }
+        
+        else if self.leftChild != nil, self.rightChild != nil {
+            return "\(self.leftChild!.value) <- \(self.value) -> \(self.rightChild!.value)"
+        }
+        
+        fatalError("Bug..")
+    }
+    
+    
+}
