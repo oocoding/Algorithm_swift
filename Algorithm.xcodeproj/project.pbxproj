@@ -20,6 +20,8 @@
 		DD81E74D27E882910019CE8A /* RBNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81E74C27E882910019CE8A /* RBNode.swift */; };
 		DD81E74F27E887F70019CE8A /* BFSNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81E74E27E887F70019CE8A /* BFSNode.swift */; };
 		DD81E75127E889BD0019CE8A /* BFSNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81E75027E889BD0019CE8A /* BFSNodeTests.swift */; };
+		DD81E75327E8C7C20019CE8A /* QueueByArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81E75227E8C7C20019CE8A /* QueueByArray.swift */; };
+		DD81E75527E8C7F00019CE8A /* QueueByArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81E75427E8C7F00019CE8A /* QueueByArrayTests.swift */; };
 		DD8677D927E7576E00213C28 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677D827E7576E00213C28 /* Node.swift */; };
 		DD8677DB27E7577E00213C28 /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677DA27E7577E00213C28 /* NodeTests.swift */; };
 		DD8677DF27E75BA400213C28 /* SingleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8677DE27E75BA400213C28 /* SingleLinkedList.swift */; };
@@ -53,6 +55,8 @@
 		DD81E74C27E882910019CE8A /* RBNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBNode.swift; sourceTree = "<group>"; };
 		DD81E74E27E887F70019CE8A /* BFSNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFSNode.swift; sourceTree = "<group>"; };
 		DD81E75027E889BD0019CE8A /* BFSNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFSNodeTests.swift; sourceTree = "<group>"; };
+		DD81E75227E8C7C20019CE8A /* QueueByArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueByArray.swift; sourceTree = "<group>"; };
+		DD81E75427E8C7F00019CE8A /* QueueByArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueByArrayTests.swift; sourceTree = "<group>"; };
 		DD8677D827E7576E00213C28 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		DD8677DA27E7577E00213C28 /* NodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
 		DD8677DE27E75BA400213C28 /* SingleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLinkedList.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 				DD81E74A27E850C90019CE8A /* BinarySearchTree.swift */,
 				DD81E74C27E882910019CE8A /* RBNode.swift */,
 				DD81E74E27E887F70019CE8A /* BFSNode.swift */,
+				DD81E75227E8C7C20019CE8A /* QueueByArray.swift */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 				DD81E74627E83D6C0019CE8A /* BTNodeTests.swift */,
 				DD81E74827E850A10019CE8A /* BinarySearchTreeTests.swift */,
 				DD81E75027E889BD0019CE8A /* BFSNodeTests.swift */,
+				DD81E75427E8C7F00019CE8A /* QueueByArrayTests.swift */,
 			);
 			path = AlgorithmTests;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 				DD4F6A7927E7AB7100EFFB43 /* DoubleLinkedNode.swift in Sources */,
 				DD81E73F27E82A110019CE8A /* TreeNode.swift in Sources */,
 				DD4F6A7D27E7AD2E00EFFB43 /* DoublyLinkedList.swift in Sources */,
+				DD81E75327E8C7C20019CE8A /* QueueByArray.swift in Sources */,
 				DD81E74F27E887F70019CE8A /* BFSNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +272,7 @@
 				DD81E74727E83D6C0019CE8A /* BTNodeTests.swift in Sources */,
 				DD81E74927E850A10019CE8A /* BinarySearchTreeTests.swift in Sources */,
 				DD8677E127E75BAF00213C28 /* SingleLinkedListTests.swift in Sources */,
+				DD81E75527E8C7F00019CE8A /* QueueByArrayTests.swift in Sources */,
 				DD4F6A7F27E7AD4B00EFFB43 /* DoublyLinkedListTests.swift in Sources */,
 				DD81E75127E889BD0019CE8A /* BFSNodeTests.swift in Sources */,
 				DD81E74127E830510019CE8A /* TreeNodeTests.swift in Sources */,
