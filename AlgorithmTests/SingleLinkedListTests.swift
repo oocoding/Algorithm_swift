@@ -73,7 +73,7 @@ class SingleLinkedListTests: XCTestCase {
         sut.head = tmpHead
         XCTAssertEqual(sut, makeSUT(values: [1,2,3]))
         
-        // if elements are not equal. then suts are not equal.
+        // if elements are not equal. then suts are not equal to each other.
         sut.append(value: 3)
         sut.append(value: 4)
         XCTAssertNotEqual(sut, makeSUT(values: [1,2,3,4]))
