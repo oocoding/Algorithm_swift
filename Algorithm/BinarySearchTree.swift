@@ -114,12 +114,12 @@ class BinarySearchTree<T> where T:Comparable, T:CustomStringConvertible {
                 return nil
             }
             
-            if rootNode.leftChild == nil {
+            else if rootNode.leftChild == nil {
                 // 只存在左节点，那么只需要移动 右节点
                 return rootNode.rightChild
             }
             
-            if rootNode.rightChild == nil {
+            else if rootNode.rightChild == nil {
                 return rootNode.leftChild
             }
             
